@@ -94,12 +94,6 @@ class PlanGraphLevel(object):
         self.proposition_layer.add_proposition(prop) adds the proposition prop to the current layer
 
         """
-        # currentLayerActions = self.action_layer.get_actions()
-        # for a in currentLayerActions:
-        #     for p in a.get_add():
-        #         if p not in self.proposition_layer.get_propositions():
-        #             self.proposition_layer.add_proposition(p)
-        #         p.add_producer(a)
         current_layer_actions = self.action_layer.get_actions()
         # Dictionary that each element is: (proposition_name, proposition_instance)
         added_propositions = dict()
@@ -108,8 +102,8 @@ class PlanGraphLevel(object):
             for prop in action_prop:
                 prop_name = prop.get_name()
                 if prop_name not in added_propositions.keys():
-                    # new_prop = Proposition(prop_name)
-                    new_prop = prop
+                    new_prop = Proposition(prop_name)
+                    # new_prop = prop
                     added_propositions[prop_name] = new_prop
                 new_prop = added_propositions[prop_name]
                 self.proposition_layer.add_proposition(prop)
@@ -153,7 +147,10 @@ class PlanGraphLevel(object):
         You don't have to use this function
         """
         previous_layer_proposition = previous_layer.get_proposition_layer()
-        "*** YOUR CODE HERE ***"
+
+        self.update_action_layer(previous_layer_proposition)
+        self.update_proposition_layer()
+
 
 
 def mutex_actions(a1, a2, mutex_props):
