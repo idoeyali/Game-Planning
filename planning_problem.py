@@ -194,8 +194,10 @@ if __name__ == '__main__':
     if len(sys.argv) != 1 and len(sys.argv) != 4:
         print("Usage: PlanningProblem.py domainName problemName heuristicName(max, sum or zero)")
         exit()
-    domain = 'dwrDomain.txt'
-    problem = 'dwrProblem.txt'
+    # domain = 'dwrDomain.txt'
+    # problem = 'dwrProblem.txt'
+    domain = 'hanoi_2_3_domain.txt'
+    problem = 'hanoi_2_3_problem.txt'
     heuristic = null_heuristic
     if len(sys.argv) == 4:
         domain = str(sys.argv[1])

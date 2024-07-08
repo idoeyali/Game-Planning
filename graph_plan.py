@@ -261,8 +261,10 @@ if __name__ == '__main__':
     if len(sys.argv) != 1 and len(sys.argv) != 3:
         print("Usage: graph_plan.py domain_name problem_name")
         exit()
-    domain = 'dwrDomain.txt'
-    problem = 'dwrProblem.txt'
+    # domain = 'dwrDomain.txt'
+    # problem = 'dwrProblem.txt'
+    domain = 'hanoi_3_3_domain.txt'
+    problem = 'hanoi_3_3_problem.txt'
     if len(sys.argv) == 3:
         domain = str(sys.argv[1])
         problem = str(sys.argv[2])

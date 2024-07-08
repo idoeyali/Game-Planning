@@ -1,5 +1,5 @@
 Propositions:
-r1 r2 q1 q2 ur uq a1 a2 ar aq b1 b2 br bq 
+r1 r2 q1 q2 ur uq a1 a2 ar aq b1 b2 br bq
 Actions:
 Name: Mr12 
 pre: r1 
